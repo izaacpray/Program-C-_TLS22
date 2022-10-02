@@ -1,0 +1,46 @@
+#include <iostream> 
+using namespace std; 
+int main() 
+{
+    cout<<"            Kalkulator BMI \n"; cout<<"=====================================\n"; 
+    float berat, tinggi, BMI; 
+    cout <<"Masukkan Berat dan Tinggi Badan Anda! \n"; 
+    cout <<"Berat Badan (kg): "; 
+    cin >> berat ; 
+    cout <<"Tinggi Badan (cm): "; 
+    cin >> tinggi ; 
+
+    while (tinggi==0) 
+    {
+        cout<<"\n=====================================\n"; 
+        cout <<"Maaf, tinggi badan tidak boleh 0\n\n"; 
+        cout <<"Masukkan Berat dan Tinggi Badan Anda! \n"; 
+        cout <<"Berat Badan (kg): "; 
+        cin >> berat ; 
+        cout <<"Tinggi Badan (cm): "; 
+        cin >> tinggi ; 
+    } 
+
+    BMI = (berat/((tinggi/100)*(tinggi/100))); 
+    cout << "\nIndeks BMI kamu adalah: " << BMI << endl ; 
+
+    if (BMI<18.5) 
+    { 
+        cout<<"Kamu kurang berat badan :("; 
+    } 
+    else if (18.5<=BMI && BMI<=22.9) 
+    {  
+    cout<<"Nice! Berat badanmu normal"; 
+    } 
+    else if (22.9<BMI && BMI<=24.9) 
+    { 
+    cout<<"Wah berat badanmu berlebih :D"; 
+    }  
+    else if (BMI>24.9) 
+    { 
+    cout<<"\nKamu termasuk obesitas, \nYuk jadwalkan olahraga :)"; 
+    } 
+
+    cout<<"\n=====================================\n";
+    return 0; 
+}
